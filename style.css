@@ -1,0 +1,57 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    padding: 1em;
+    border: none;
+}
+
+input {
+    padding: 1em;
+    border: none;
+}
+
+dialog {
+    border: none;
+    border-radius: 1em;
+    justify-self: center;
+    align-self: center;
+    padding: 1em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: stretch;
+    text-align: center;
+}
+
+.header {
+    padding: 1em;
+    text-align: center;
+    background-color: gray;
+}
+
+.main {
+    flex: 1 1 0;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.footer {
+    padding: 1em;
+    text-align: center;
+    background-color: gray;
+}

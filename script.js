@@ -13,3 +13,16 @@ function addBookToLibrary(title,author,pages,read) {
   myLibrary.push(book);
 }
 
+function addCard() {
+}
+
+let dialog = document.querySelector("dialog");
+let addBookButton = document.querySelector('#addBook');
+
+console.log(addBookButton);
+
+addBookButton.addEventListener('click',
+    () => dialog.showModal()
+);
+
+
