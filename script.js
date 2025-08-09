@@ -49,13 +49,13 @@ function displayBooks() {
     }
 }
 
-function submitClick(event) {
+function submitForm(event) {
     event.preventDefault();
     const title = document.querySelector('#title').value;
     const author = document.querySelector('#author').value;
     const pages = document.querySelector('#pages').value;
     const read = document.querySelector('#read').checked;
-
+    
     addBook(title, author, pages, read);
     dialog.close();
     displayBooks();
@@ -65,13 +65,12 @@ const myLibrary = [];
 
 let dialog = document.querySelector("dialog");
 let addBookButton = document.querySelector('#addBook');
-let submitButton = document.querySelector('#submitButton');
+let form = document.querySelector('form');
 
 addBookButton.addEventListener('click', () => {
     dialog.showModal();
-    let form = document.querySelector('form');
     form.reset();
 });
-submitButton.addEventListener('click', submitClick);
+form.addEventListener('submit', submitForm);
 
 displayBooks();

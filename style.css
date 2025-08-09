@@ -16,19 +16,24 @@ body {
     display: flex;
     flex-direction: column;
 
-    --white-blue: hsl(232deg, 97%, 95%);
-    --dark-lavender: hsl(232deg, 97%, 75%);
+    --white-blue: hsl(232deg, 97%, 90%);
+    --dark-lavender: hsl(232deg, 97%, 80%);
     --gray: hsl(226deg, 64%, 97%);
 }
 
 button {
     padding: 1em;
     border: none;
-    background-color: var(--dark-lavender);
+    background-color: var(--white-blue);
+    border-radius: 1em;
+}
+
+#addBook {
+    border-radius: 0em;
 }
 
 button:hover {
-    filter: brightness(0.8);
+    filter: brightness(0.9);
 }
 
 input {
@@ -53,9 +58,11 @@ form {
 }
 
 .header {
-    padding: 1em;
+    font-size: 200%;
+    font-weight: bold;
+    padding: 0.5em;
     text-align: center;
-    background-color: var(--ctp-mocha-lavender);
+    background-color: var(--dark-lavender);
 }
 
 .main {
@@ -69,16 +76,22 @@ form {
     display: grid;
     padding: 1em;
     gap: 1em;
-    grid-template-columns: repeat(auto-fit, minmax(30ch,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(40ch,1fr));
 }
 
 .card {
     padding: 1em;
+    border-radius: 1em;
     background-color: white;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
+    text-align: center;
 }
 
 .footer {
     padding: 1em;
     text-align: center;
-    background-color: var(--ctp-mocha-lavender);
+    background-color: var(--dark-lavender);
 }
