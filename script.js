@@ -67,7 +67,11 @@ let dialog = document.querySelector("dialog");
 let addBookButton = document.querySelector('#addBook');
 let submitButton = document.querySelector('#submitButton');
 
-addBookButton.addEventListener('click', () => dialog.showModal());
+addBookButton.addEventListener('click', () => {
+    dialog.showModal();
+    let form = document.querySelector('form');
+    form.reset();
+});
 submitButton.addEventListener('click', submitClick);
 
 displayBooks();
