@@ -30,6 +30,8 @@ button {
 
 #addBook {
     border-radius: 0em;
+    font-size: 120%;
+    padding: 0.7em;
 }
 
 button:hover {
@@ -39,6 +41,8 @@ button:hover {
 input {
     padding: 1em;
     border: none;
+    border: 0.1em solid var(--white-blue);
+    border-radius: 1em;
 }
 
 dialog {
@@ -55,6 +59,13 @@ form {
     gap: 1em;
     align-items: stretch;
     text-align: center;
+}
+
+.read-checkbox-align {
+    display: flex;
+    justify-content: center;
+    gap: 0.8em;
+    align-items: center;
 }
 
 .header {

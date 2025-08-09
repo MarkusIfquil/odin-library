@@ -10,9 +10,7 @@
 </head>
 
 <body>
-    <div class="header">
-        library
-    </div>
+    <div class="header">library</div>
     <div class="main">
         <button id="addBook">add book</button>
         <dialog>
@@ -21,15 +19,15 @@
                 <input required type="text" name="title" id="title" placeholder="title">
                 <input required type="text" name="author" id="author" placeholder="author">
                 <input required type="number" name="pages" id="pages" placeholder="pages">
-                <label aria-required="true" for="read">have you read it</label>
-                <input type="checkbox" name="read" id="read">
+                <div class="read-checkbox-align">
+                    <label for="read">have you read it</label>
+                    <input type="checkbox" name="read" id="read">
+                </div>
                 <button type="submit" id="submitButton">submit</button>
             </form>
         </dialog>
         <div class="card-container"></div>
     </div>
-    <div class="footer">
-        jan Mawaku
-    </div>
+    <div class="footer">jan Mawaku</div>
 </body>
 </html>
