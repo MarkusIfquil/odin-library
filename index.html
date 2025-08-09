@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Library</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
@@ -18,12 +18,12 @@
         <dialog>
             <form>
                 <legend>add new book</legend>
-                <input type="text" name="title" id="title" placeholder="title">
-                <input type="text" name="author" id="author" placeholder="author">
-                <input type="number" name="pages" id="pages" placeholder="pages">
-                <label for="read">have you read it</label>
+                <input required type="text" name="title" id="title" placeholder="title">
+                <input required type="text" name="author" id="author" placeholder="author">
+                <input required type="number" name="pages" id="pages" placeholder="pages">
+                <label aria-required="true" for="read">have you read it</label>
                 <input type="checkbox" name="read" id="read">
-                <button type="button" id="submitButton">submit</button>
+                <button type="submit" id="submitButton">submit</button>
             </form>
         </dialog>
         <div class="card-container">

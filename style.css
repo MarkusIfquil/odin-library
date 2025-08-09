@@ -49,6 +49,10 @@ form {
 
 }
 
+.card {
+    padding: 1em;
+    background-color: lightblue;
+}
 
 .footer {
     padding: 1em;
