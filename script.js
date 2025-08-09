@@ -36,12 +36,25 @@ function displayBooks() {
         createChildAndAppendIt('title', `${book.title}`, card);
         createChildAndAppendIt('author', `by ${book.author}`, card);
         createChildAndAppendIt('pages', `${book.pages} pages`, card);
-        createChildAndAppendIt('read', `${book.read ? 'read' : 'haven\'t read yet'}`, card);
+
+        let readButton = document.createElement('button');
+        readButton.className = 'readButton';
+        readButton.textContent = book.read ? 'read' : 'haven\'t read yet';
+        readButton.style.backgroundColor = book.read ? 'var(--ctp-mocha-green)' : 'var(--ctp-mocha-red)';
+        readButton.addEventListener('click', () => {
+            book.read = !book.read;
+            readButton.textContent = book.read ? 'read' : 'haven\'t read yet';
+            readButton.style.backgroundColor = book.read ? 'var(--ctp-mocha-green)' : 'var(--ctp-mocha-red)';
+        });
+        card.appendChild(readButton);
 
         let removeButton = document.createElement('button');
         removeButton.className = 'removeButton';
         removeButton.textContent = 'remove book';
-        removeButton.addEventListener('click', () => { removeBook(book.id); displayBooks(); });
+        removeButton.addEventListener('click', () => {
+            removeBook(book.id);
+            displayBooks();
+        });
         card.appendChild(removeButton);
 
         console.log(card);
@@ -55,7 +68,7 @@ function submitForm(event) {
     const author = document.querySelector('#author').value;
     const pages = document.querySelector('#pages').value;
     const read = document.querySelector('#read').checked;
-    
+
     addBook(title, author, pages, read);
     dialog.close();
     displayBooks();

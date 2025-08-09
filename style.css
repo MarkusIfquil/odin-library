@@ -103,7 +103,7 @@ form {
 }
 
 .card > button {
-    padding-inline: 4em;
+    width: 50%;
 }
 
 .footer {
