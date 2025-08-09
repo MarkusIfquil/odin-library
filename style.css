@@ -1,17 +1,34 @@
+@import url('https://cdn.jsdelivr.net/npm/@catppuccin/palette/css/catppuccin.css');
+
+@font-face {
+    font-family: jetbrainsmono;
+    src: url('fonts/JetBrainsMonoNerdFontPropo-Regular.ttf');
+}
+
 * {
     padding: 0;
     margin: 0;
+    font-family: jetbrainsmono, monospace;
 }
 
 body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+
+    --white-blue: hsl(232deg, 97%, 95%);
+    --dark-lavender: hsl(232deg, 97%, 75%);
+    --gray: hsl(226deg, 64%, 97%);
 }
 
 button {
     padding: 1em;
     border: none;
+    background-color: var(--dark-lavender);
+}
+
+button:hover {
+    filter: brightness(0.8);
 }
 
 input {
@@ -38,24 +55,23 @@ form {
 .header {
     padding: 1em;
     text-align: center;
-    background-color: gray;
+    background-color: var(--ctp-mocha-lavender);
 }
 
 .main {
     flex: 1 1 0;
-
     display: flex;
     flex-direction: column;
-
+    background-color: var(--gray);
 }
 
 .card {
     padding: 1em;
-    background-color: lightblue;
+    background-color: white;
 }
 
 .footer {
     padding: 1em;
     text-align: center;
-    background-color: gray;
+    background-color: var(--ctp-mocha-lavender);
 }

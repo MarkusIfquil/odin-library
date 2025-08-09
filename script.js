@@ -33,10 +33,10 @@ function displayBooks() {
         let card = document.createElement('div');
         card.className = 'card';
 
-        createChildAndAppendIt('title', book.title, card);
-        createChildAndAppendIt('author', book.author, card);
-        createChildAndAppendIt('pages', book.pages, card);
-        createChildAndAppendIt('read', book.read, card);
+        createChildAndAppendIt('title', `title: ${book.title}`, card);
+        createChildAndAppendIt('author', `author: ${book.author}`, card);
+        createChildAndAppendIt('pages', `page count: ${book.pages}`, card);
+        createChildAndAppendIt('read', `read: ${book.read}`, card);
 
         let removeButton = document.createElement('button');
         removeButton.className = 'removeButton';
