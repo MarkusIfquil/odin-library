@@ -99,6 +99,11 @@ form {
     flex-direction: column;
     gap: 0.2em;
     text-align: center;
+    align-items: center;
+}
+
+.card > button {
+    padding-inline: 4em;
 }
 
 .footer {

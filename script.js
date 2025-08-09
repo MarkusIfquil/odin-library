@@ -36,7 +36,7 @@ function displayBooks() {
         createChildAndAppendIt('title', `${book.title}`, card);
         createChildAndAppendIt('author', `by ${book.author}`, card);
         createChildAndAppendIt('pages', `${book.pages} pages`, card);
-        createChildAndAppendIt('read', `${book.read ? 'read' : 'not read yet'}`, card);
+        createChildAndAppendIt('read', `${book.read ? 'read' : 'haven\'t read yet'}`, card);
 
         let removeButton = document.createElement('button');
         removeButton.className = 'removeButton';
