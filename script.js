@@ -74,12 +74,28 @@ class Display {
         const author = document.querySelector('#author').value;
         const pages = document.querySelector('#pages').value;
         const read = document.querySelector('#read').checked;
+        console.log("AAA");
 
         myLibrary.addBook(title, author, pages, read);
         dialog.close();
         Display.displayBooks();
     }
 }
+
+function onAuthor() {
+  const author = document.querySelector("#author");
+  if(author.validity.valueMissing) {
+    author.setCustomValidity("the author name must be filled");
+  }
+  else {
+    author.setCustomValidity("");
+  }
+}
+
+const author = document.querySelector("#author");
+const submitButton = document.querySelector("#submitButton");
+author.addEventListener("input",onAuthor);
+submitButton.addEventListener("click",onAuthor);
 
 let myLibrary = new Library();
 
